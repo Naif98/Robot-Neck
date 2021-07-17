@@ -1,0 +1,32 @@
+
+void setup()
+{
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+  
+  digitalWrite(12, HIGH); // enable motor 1
+  digitalWrite(13, HIGH); // enable motor 2
+}
+
+void loop()
+{
+  digitalWrite(4, HIGH);	// make motor 1 rotate clockwise
+  digitalWrite(5, LOW);	
+  
+  digitalWrite(10, HIGH);	// make motor 2 rotate clockwise
+  digitalWrite(11, LOW);
+  
+  delay(3000); 				// wait 3s
+  
+  digitalWrite(4, LOW);		// make motor 1 rotate anti-clockwise
+  digitalWrite(5, HIGH);
+  
+  digitalWrite(10, LOW); 	// make motor 2 rotate anti-clockwise
+  digitalWrite(11, HIGH);
+  
+  delay(3000); 				// wait 3s
+}
